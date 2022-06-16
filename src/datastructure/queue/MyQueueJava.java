@@ -1,9 +1,8 @@
 package datastructure.queue;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
-public class MyQueue <T>{
+public class MyQueueJava<T>{
     ArrayList<T>  queue = new ArrayList<T>();
 
     public T dequeue(){
@@ -22,7 +21,7 @@ public class MyQueue <T>{
     }
 
     public static void main(String[] args) {
-        MyQueue<Integer> mq = new MyQueue<Integer>();
+        MyQueueJava<Integer> mq = new MyQueueJava<Integer>();
         mq.enqueue(1);
         mq.enqueue(2);
         mq.enqueue(3);

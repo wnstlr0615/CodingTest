@@ -2,7 +2,7 @@ package datastructure.stack;
 
 import java.util.ArrayList;
 
-public class MyStack <T>{
+public class MyStackJava<T>{
     ArrayList<T> stack = new ArrayList<>();
     public T pop(){
         if(!stack.isEmpty()){

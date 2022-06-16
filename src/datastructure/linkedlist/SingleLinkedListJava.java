@@ -1,6 +1,6 @@
 package datastructure.linkedlist;
 
-public class SingleLinkedList <T>{
+public class SingleLinkedListJava<T>{
     Node<T> head = null;
 
     public void addNode(T data){
@@ -79,7 +79,7 @@ public class SingleLinkedList <T>{
     }
 
     public static void main(String[] args) {
-        SingleLinkedList<String> linkedList = new SingleLinkedList<>();
+        SingleLinkedListJava<String> linkedList = new SingleLinkedListJava<>();
         linkedList.addNode("hello");
         linkedList.addNode("hi1");
         linkedList.addNode("hi2");
