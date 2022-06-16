@@ -1,4 +1,4 @@
-package pratice.graph.dp;
+package pratice.dp;
 
 import java.io.BufferedReader;
 import java.io.IOException;

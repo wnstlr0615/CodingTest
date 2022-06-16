@@ -1,20 +1,27 @@
-package pratice.graph.dp;
+package pratice.dp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 타일링11726 {
+public class 더하기123_9095 {
     static Reader sc = new Reader();
+    static int N, T;
     public static void main(String[] args){
-        int[] dp = new int[1001];
+        T = sc.nextInt();
+        int[] dp = new int[11];
+        dp[0] = 0;
         dp[1] = 1;
         dp[2] = 2;
-        for (int i = 3; i < 1001; i++) {
-            dp[i] = dp[i - 1] % 10007 + dp[i - 2] % 10007 ;
+        dp[3] = 4;
+        for (int i = 4; i < 11; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
         }
-        System.out.println(dp[sc.nextInt()] % 10007);;
+        for (int i = 0; i < T; i++) {
+            N = sc.nextInt();
+            System.out.println(dp[N]);
+        }
     }
     static class Reader{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
