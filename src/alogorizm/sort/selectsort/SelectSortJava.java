@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class SelectSort {
+public class SelectSortJava {
     public void sort(ArrayList<Integer> arrayList){
         int select;
         int size = arrayList.size();
@@ -20,13 +20,13 @@ public class SelectSort {
     }
 
     public static void main(String[] args) {
-        SelectSort selectSort = new SelectSort();
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        SelectSortJava selectSortJava = new SelectSortJava();
+        ArrayList<Integer> arrayList = new ArrayList<>();
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
             arrayList.add(random.nextInt(100));
         }
-        selectSort.sort(arrayList);
+        selectSortJava.sort(arrayList);
 
         arrayList.forEach(System.out::println);
 

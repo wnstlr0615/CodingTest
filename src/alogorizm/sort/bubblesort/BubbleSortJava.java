@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class BubbleSort {
+public class BubbleSortJava {
     public void sort(ArrayList<Integer> arrayList){
         int size = arrayList.size();
         for (int i = 0; i < size; i++) {
@@ -22,12 +22,12 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        BubbleSort bubbleSort = new BubbleSort();
+        BubbleSortJava bubbleSortJava = new BubbleSortJava();
         ArrayList<Integer> integers = new ArrayList<>(Arrays.asList(5, 6, 9, 1, 3, 1, 5, 7, 10));
-        bubbleSort.sort(integers);
+        bubbleSortJava.sort(integers);
 
-        for (int i = 0; i < integers.size(); i++) {
-            System.out.println(integers.get(i));
+        for (Integer integer : integers) {
+            System.out.println(integer);
         }
     }
 }
