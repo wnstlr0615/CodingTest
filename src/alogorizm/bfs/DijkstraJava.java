@@ -2,7 +2,7 @@ package alogorizm.bfs;
 
 import java.util.*;
 
-public class Dijkstra {
+public class DijkstraJava {
     public HashMap<String,Integer> dijkstra(HashMap<String, ArrayList<Edge>> graph, String start){
         HashMap<String, Integer> distances = new HashMap<String, Integer>();
         graph.keySet()
@@ -45,23 +45,24 @@ public class Dijkstra {
         graph.put("E", new ArrayList<>(List.of(new Edge("F", 1))));
         graph.put("F", new ArrayList<>(List.of(new Edge("A", 5))));
 
-        Dijkstra dijkstra = new Dijkstra();
-        HashMap<String, Integer> result = dijkstra.dijkstra(graph, "A");
+        DijkstraJava dijkstraJava = new DijkstraJava();
+        HashMap<String, Integer> result = dijkstraJava.dijkstra(graph, "A");
         System.out.println(result);
     }
+    static class Edge implements Comparable<alogorizm.bfs.Edge>{
+        String vertex;
+        int distance;
+
+        public Edge(String vertex, int distance) {
+            this.vertex = vertex;
+            this.distance = distance;
+        }
+
+        @Override
+        public int compareTo(alogorizm.bfs.Edge edge) {
+            return this.distance - edge.getDistance();
+        }
+    }
 }
 
-class Edge implements Comparable<Edge>{
-    String vertex;
-    int distance;
 
-    public Edge(String vertex, int distance) {
-        this.vertex = vertex;
-        this.distance = distance;
-    }
-
-    @Override
-    public int compareTo(Edge edge) {
-        return this.distance - edge.distance;
-    }
-}

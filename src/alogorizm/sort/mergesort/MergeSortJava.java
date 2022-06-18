@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public class MergeSort {
+public class MergeSortJava {
     public ArrayList<Integer> split(ArrayList<Integer> arrayList){
         if(arrayList.size() <= 1){
             return arrayList;
@@ -45,8 +45,8 @@ public class MergeSort {
         Random random = new Random();
         IntStream.rangeClosed(0, 100)
                 .forEach(i -> arrayList.add(random.nextInt(100)));
-        MergeSort mergeSort = new MergeSort();
-        ArrayList<Integer> sortList = mergeSort.split(arrayList);
+        MergeSortJava mergeSortJava = new MergeSortJava();
+        ArrayList<Integer> sortList = mergeSortJava.split(arrayList);
         sortList.forEach(System.out::println);
     }
 }

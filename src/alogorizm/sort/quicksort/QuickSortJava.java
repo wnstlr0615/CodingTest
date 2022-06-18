@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-public class QuickSort {
+public class QuickSortJava {
     public ArrayList<Integer> sort(ArrayList<Integer> arrayList){
         if(arrayList.size()  <= 1){
             return arrayList;
@@ -36,8 +36,7 @@ public class QuickSort {
         IntStream.rangeClosed(0, 10)
                 .forEach(i -> arrayList.add(random.nextInt(100)));
 
-        QuickSort quickSort = new QuickSort();
-        ArrayList<Integer> sortList = quickSort.sort(arrayList);
-
+        QuickSortJava quickSortJava = new QuickSortJava();
+        ArrayList<Integer> sortList = quickSortJava.sort(arrayList);
     }
 }
