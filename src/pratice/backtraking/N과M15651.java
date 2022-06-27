@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 
-
-public class N과M10561 {
+public class N과M15651 {
     public static int[] selected;
     public static int N, M;
     public static StringBuffer buffer = new StringBuffer();
@@ -23,7 +22,7 @@ public class N과M10561 {
     public static void function(int curIdx){
         if(curIdx >= M){
             for (int i = 0; i < curIdx; i++) {
-                buffer.append(selected[i] + " ");
+                buffer.append(selected[i]).append(" ");
             }
             buffer.append("\n");
         }else{
