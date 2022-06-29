@@ -36,26 +36,27 @@ public class 국영수10825 {
             students.add(new Student(str[0], kor, eng, math));
         }
     }
-}
+    static class Student implements Comparable<Student>{
+        public String name;
+        public int kor;
+        public int eng;
+        public int math;
 
-class Student implements Comparable<Student>{
-    public String name;
-    public int kor;
-    public int eng;
-    public int math;
+        public Student(String name, int kor, int eng, int math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+        }
 
-    public Student(String name, int kor, int eng, int math) {
-        this.name = name;
-        this.kor = kor;
-        this.eng = eng;
-        this.math = math;
+        @Override
+        public int compareTo(Student student) {
+            if(this.kor != student.kor) return student.kor - this.kor ;
+            if(this.eng != student.eng) return  this.eng - student.eng;
+            if(this.math != student.math) return student.math - this.math;
+            return this.name.compareTo(student.name);
+        }
     }
 
-    @Override
-    public int compareTo(Student student) {
-        if(this.kor != student.kor) return student.kor - this.kor ;
-        if(this.eng != student.eng) return  this.eng - student.eng;
-        if(this.math != student.math) return student.math - this.math;
-        return this.name.compareTo(student.name);
-    }
 }
+
