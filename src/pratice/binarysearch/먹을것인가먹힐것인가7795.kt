@@ -1,6 +1,5 @@
 package pratice.binarysearch
 
-
 fun main() {
     val T = readln().toInt()
     repeat(T) {
@@ -11,22 +10,22 @@ fun main() {
 
         a.sort()
         b.sort()
-        for(num in a) {
+        for (num in a) {
             cnt += lowerBound(num, b)
         }
         println(cnt)
     }
 }
 
-fun lowerBound(num: Int, arr: MutableList<Int>): Int {
+private fun lowerBound(num: Int, arr: MutableList<Int>): Int {
     var L = 0
     var R = arr.size - 1
 
-    while(L <= R){
+    while (L <= R) {
         val mid = (L + R) / 2
-        if(num > arr[mid] ){
+        if (num > arr[mid]) {
             L = mid + 1
-        }else{
+        } else {
             R = mid - 1
         }
     }

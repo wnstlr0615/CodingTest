@@ -35,7 +35,6 @@ public class 두용액2470 {
     private static void pro(int[] arr) {
         int minSum = Integer.MAX_VALUE;
         int v1 = 0, v2 = 0;
-        int sum;
         for (int i = 0; i < arr.length - 1; i++) {
             if(arr[i] > 0 ){
                 break;
