@@ -16,8 +16,6 @@ public class 이상한술집13702 {
     public static void main(String[] args) throws IOException {
         input();
         pro();
-
-
     }
     private static void pro() {
         long L = 0;

@@ -8,7 +8,6 @@ public class 용돈관리6236 {
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static int N, M;
     public static int[] A;
-
     public static void main(String[] args) throws IOException {
         input();
         pro();
@@ -16,32 +15,33 @@ public class 용돈관리6236 {
 
     private static void pro() {
         int L = 0;
-        int R = 10_000;
-        int k = R;
+        int R = Integer.MAX_VALUE;
+        int res = R;
         while(L <= R){
             int mid = (L + R) / 2;
             if(isPossible(mid)){
-                k = mid;
+                res = mid;
                 R = mid - 1;
             }else{
                 L = mid + 1;
             }
         }
-        System.out.println(k);
+        System.out.println(res);
     }
 
     private static boolean isPossible(int mid) {
-        int cnt = 1;
+        int cnt = 0;
         long sum = 0;
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N ; i++) {
+            if(A[i] > mid) return false;
             if(sum + A[i] <= mid){
                 sum += A[i];
             }else{
-                sum = A[i];
                 cnt++;
+                sum = A[i];
             }
         }
-        return cnt >= M;
+        return cnt < M;
     }
 
     private static void input() throws IOException {
@@ -49,9 +49,8 @@ public class 용돈관리6236 {
         N = Integer.parseInt(split[0]);
         M = Integer.parseInt(split[1]);
         A = new int[N];
-        split = br.readLine().split(" ");
         for (int i = 0; i < N; i++) {
-            A[i] = Integer.parseInt(split[i]);
+            A[i] = Integer.parseInt(br.readLine());
         }
     }
 }
