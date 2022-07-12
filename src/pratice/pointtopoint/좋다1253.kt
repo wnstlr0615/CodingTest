@@ -14,7 +14,7 @@ fun main() {
     println(cnt)
 }
 
-fun func(x: Int, arr: MutableList<Int>): Boolean {
+private fun func(x: Int, arr: MutableList<Int>): Boolean {
     var L = 0
     var R = arr.size - 1
     val target = arr[x]
