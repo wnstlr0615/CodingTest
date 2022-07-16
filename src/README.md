@@ -5,7 +5,14 @@
 
 
 Readme 정리 하기
-
+## 자료구조
+- List
+- Array
+- Map
+- Stack
+- Queue
+- Set
+- PriorityQueue
 ## 정렬
 - 버블정렬
 - 선택정렬
@@ -21,7 +28,7 @@ Readme 정리 하기
  - Backtracking
  - Dijkstra
  - TopologicalSort
- - 
+ - Kruskal
 
 ## 알고리즘 사이트
 
