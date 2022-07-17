@@ -2,8 +2,9 @@ package alogorizm.bfs
 
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.collections.HashMap
 
-fun dijkstra(graph: HashMap<String, ArrayList<Edge>>, startNode: String): MutableMap<String, Int> {
+private fun dijkstra(graph: java.util.HashMap<String, ArrayList<Edge>>, startNode: String): MutableMap<String, Int> {
     val distances = mutableMapOf<String, Int>()
     for (key in graph.keys) {
         distances[key] = Int.MAX_VALUE
@@ -29,15 +30,6 @@ fun dijkstra(graph: HashMap<String, ArrayList<Edge>>, startNode: String): Mutabl
     return distances
 }
 
-class Edge(
-    val node: String,
-    val distance: Int
-) : Comparable<Edge> {
-    override fun compareTo(other: Edge): Int {
-        return distance - other.distance
-    }
-}
-
 fun main() {
     val graph = HashMap<String, ArrayList<Edge>>()
     graph["A"] =
@@ -50,4 +42,13 @@ fun main() {
 
     val result = dijkstra(graph, "A")
     println(result)
+}
+
+private class Edge(
+    val node: String,
+    val distance: Int
+) : Comparable<Edge> {
+    override fun compareTo(other: Edge): Int {
+        return distance - other.distance
+    }
 }
