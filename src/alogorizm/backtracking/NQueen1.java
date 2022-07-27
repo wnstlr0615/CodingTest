@@ -2,7 +2,7 @@ package alogorizm.backtracking;
 
 import java.util.ArrayList;
 
-public class NQueen {
+public class NQueen1 {
     public void dfsFunc(Integer n, Integer currentRow, ArrayList<Integer> currentCandidate) {
         if(n.equals(currentRow)){
             System.out.println(currentCandidate);
@@ -29,7 +29,7 @@ public class NQueen {
     }
 
     public static void main(String[] args) {
-        NQueen nObject = new NQueen();
+        NQueen1 nObject = new NQueen1();
         nObject.dfsFunc(4, 0, new ArrayList<Integer>());
     }
 }
